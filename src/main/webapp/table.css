@@ -1,0 +1,39 @@
+@CHARSET "ISO-8859-1";
+header{
+	
+	padding:60px;	
+	border-bottom:1px solid black;
+	background-color:green;
+	color:yellow;
+	
+}
+h1{
+	font-family:Bradley hand itc;
+	font-size:30px;
+	color:yellow;
+}
+table{
+	
+	
+}
+section{
+	
+	padding :70px;
+	background-color:#F6D8CE;
+}
+
+table {
+	border: 3px solid red;
+    border-collapse: collapsing;
+    border-spacing: 2px 2px;
+    width: 85%;
+    padding: 10px;
+    background-color:#ABDCFB;
+}
+footer{
+	
+	border-top:1px solid black;
+	padding:70px;
+	background-color:green;
+	color:yellow;
+}
