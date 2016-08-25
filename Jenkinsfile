@@ -55,7 +55,7 @@ node {
         timeout(time: 5, unit: 'MINUTES') {
             waitUntil {
                 try {
-                    sh "curl http://52.89.38.134:8080"
+                    sh "curl http://52.37.74.74:8080/"
                     return true
                 } catch (Exception e) {
                     return false
