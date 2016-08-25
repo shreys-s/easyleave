@@ -49,7 +49,7 @@ node {
                 def ecsServicesStatus = new groovy.json.JsonSlurper().parseText(ecsServicesStatusAsJson)
                 println "$ecsServicesStatus"
                 def ecsServiceStatus = ecsServicesStatus.services[0]
-                return ecsServiceStatus.get('runningCount') == 0 && ecsServiceStatus.get('status') == "ACTIVE"
+                return ecsServiceStatus.get('runningCount') == 1 && ecsServiceStatus.get('status') == "ACTIVE"
             }
         }
         timeout(time: 5, unit: 'MINUTES') {
@@ -90,7 +90,7 @@ node {
                 def ecsServicesStatus = new groovy.json.JsonSlurper().parseText(ecsServicesStatusAsJson)
                 println "$ecsServicesStatus"
                 def ecsServiceStatus = ecsServicesStatus.services[0]
-                return ecsServiceStatus.get('runningCount') == 0 && ecsServiceStatus.get('status') == "ACTIVE"
+                return ecsServiceStatus.get('runningCount') == 1 && ecsServiceStatus.get('status') == "ACTIVE"
             }
         }
         timeout(time: 5, unit: 'MINUTES') {
