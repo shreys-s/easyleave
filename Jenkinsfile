@@ -55,15 +55,15 @@ node {
         timeout(time: 5, unit: 'MINUTES') {
             waitUntil {
                 try {
-                    sh "curl http://52.37.74.74:8080/"
+                    sh "curl http://52.37.74.74:8080/easyleave"
                     return true
                 } catch (Exception e) {
                     return false
                 }
             }
         }
-        echo "easyleave#${env.BUILD_NUMBER} SUCCESSFULLY deployed to http://52.200.92.100:80"
-        input 'Does staging http://52.200.92.100:80 look okay?'
+        echo "easyleave#${env.BUILD_NUMBER} SUCCESSFULLY deployed to http://52.37.74.74:8080/easyleave"
+        input 'Does staging http://52.37.74.74:8080/easyleave look okay?'
 
   stage 'Deploy to ECS'
   //Deploy image to production in ECS
