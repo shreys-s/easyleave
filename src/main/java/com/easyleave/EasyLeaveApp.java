@@ -23,6 +23,7 @@ public class EasyLeaveApp {
 		p.setString(6, userid);
 		p.setString(7, comment);
 		int i=p.executeUpdate();
+		con.close();
 		return i;
 		
 	}
