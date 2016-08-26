@@ -17,6 +17,7 @@ public class EasyRegister {
 		p.setString(3,email);
 		p.setString(4,pass);
 		int i= p.executeUpdate();
+		con.close();
 		return i;
 	
 	}
