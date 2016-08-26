@@ -13,6 +13,7 @@ public class EasyLogin {
 		Statement stm=con.createStatement();
 		String query="select * from emp_register";
 		ResultSet rs=((java.sql.Statement) stm).executeQuery(query);
+		con.close();
 		return rs;
 		
 	}
