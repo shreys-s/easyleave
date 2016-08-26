@@ -21,6 +21,11 @@
 	  <version>6.0.2</version>
    </dependency>
    <dependency>
+	  <groupId>org.postgresql</groupId>
+	  <artifactId>postgresql</artifactId>
+	  <version>9.4.1208</version>
+	</dependency>
+   <dependency>
 	  <groupId>javax.servlet</groupId>
 	  <artifactId>javax.servlet-api</artifactId>
 	  <version>4.0.0-b01</version>

@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.net.*;
 
 public class EasyLeaveApp {
-	public static int test(String leave_id, String leave_type, String startdate, String enddate,String status,String userid,String comment) throws SQLException{
+	public static int test(String leave_id, String leave_type, String startdate, String enddate,String status,String userid,String comment) throws URISyntaxException, SQLException{
 		
 		
 		Connection con=DBConnection.getConnection();

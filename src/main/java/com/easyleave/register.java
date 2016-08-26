@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import java.net.*;
 
 @WebServlet("/register")
 public class register extends HttpServlet {
@@ -61,7 +62,10 @@ public class register extends HttpServlet {
 				e.printStackTrace();
 			}
 			
-			
+			catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			}
 			
         
 	}

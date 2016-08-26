@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.net.*;
 
 public class EasyApproval {
-	public static int test(String status, String lid) throws SQLException{
+	public static int test(String status, String lid) throws URISyntaxException, SQLException{
 	Connection con=DBConnection.getConnection();
 	Statement stm=con.createStatement();
     

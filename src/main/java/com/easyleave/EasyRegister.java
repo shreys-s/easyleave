@@ -2,9 +2,10 @@ package com.easyleave;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.net.*;
 
 public class EasyRegister {
-	public static int test(String empid, String empname, String email, String pass) throws SQLException{
+	public static int test(String empid, String empname, String email, String pass) throws URISyntaxException, SQLException{
 		
 		Connection con=DBConnection.getConnection();
 		
