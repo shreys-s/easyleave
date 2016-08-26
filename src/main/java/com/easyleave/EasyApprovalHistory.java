@@ -15,6 +15,7 @@ public class EasyApprovalHistory {
 		p.setString(1, "Approved");
 		p.setString(2, "Rejected");
 		ResultSet rs=p.executeQuery();
+		con.close();
 		return rs;
 		
 
