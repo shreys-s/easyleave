@@ -16,6 +16,7 @@ public class EasyApproval {
 	p.setString(2, lid);
 	
 	int i=p.executeUpdate();
+	con.close();
 	return i;
 	}
 
