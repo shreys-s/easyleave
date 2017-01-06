@@ -12,6 +12,7 @@ public class EasyAdminLogin {
 		Statement stm=con.createStatement();
 		String query="select * from admin";
 		ResultSet rs=stm.executeQuery(query);
+		con.close();
 		return rs;
 		
 	}
