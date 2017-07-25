@@ -5,12 +5,27 @@
 	import java.net.*;
 	 
 	public class DBConnection {
-	 
+	 	String host = System.getenv("db_host");
+		String database = System.getenv("db_name");
+		String user = System.getenv("db_user");
+		String password = System.getenv("db_pass");
+		
 	    public static Connection getConnection() {
 			Connection con = null;
 			try {
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-		    con = DriverManager.getConnection(System.getenv("defaultConnection"));	
+			
+			String url = String.format("jdbc:mysql://%s/%s", host, database);
+
+			// Set connection properties.
+			Properties properties = new Properties();
+			properties.setProperty("user", user);
+			properties.setProperty("password", password);
+			properties.setProperty("useSSL", "true");
+			properties.setProperty("verifyServerCertificate", "true");
+			properties.setProperty("requireSSL", "false");
+				
+			Class.forName("com.mysql.jdbc.Driver");
+		    	con = DriverManager.getConnection(System.getenv(url, properties));	
 			}
 		    
 			catch (SQLException e) {
