@@ -3,6 +3,7 @@
 	import java.sql.DriverManager;
 	import java.sql.SQLException;
 	import java.net.*;
+	import java.util.Properties;
 	 
 	public class DBConnection {
 	 	String host = System.getenv("db_host");
